@@ -8,7 +8,7 @@
     "start-ui": "browser-sync start --proxy 'localhost:5050' --files 'index.html' 'public'",
     "start": "node app"
   },
-  
+
   "keywords": [],
   "author": "",
   "license": "ISC",
