@@ -1,26 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="index" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/main.css">
     
-    <title>Chat with Me</title>
+    <title>LoveChat</title>
 </head>
 <body>
     <main>
-        <h1 class="hidden">Super Sassy Chat</h1>
+        <!-- <h1 class="hidden">Super Sassy Chat</h1>
         <h4>Add a username to join the chat</h4>
         <h6>or not, to stealth post</h6>
 
         <input type="text" placeholder="your handle">
         <input type="text" placeholder="passoword">
 
-        <input type="submit" value="JOIN">
+        <input type="submit" value="JOIN"> -->
 
         <!-- temp hack to bypass login -->
-        <a href="/chat">to chat page</a>
+        <!-- <a href="/chat">to chat page</a> -->
+
+         <div class="mainContainer">
+            <section class="logo"><img src="image/love.svg" alt="loveChat"></section>
+            
+            <section class="form">
+                <input type="text" id="username" placeholder="enter username">
+                <!-- <input type="text" id="password" placeholder="type password"> -->
+            </section>
+
+            <section class="icon">
+                <a href="/chat"><img class="woman" src="image/woman.svg" alt="woman"></a>
+                <a href="/chat"><img class="man" src="image/man.svg" alt="man"></a>
+            </section>
+            <h4>CHOOSE YOUR USER ICON TO JOIN THE CHAT</h4>
+        </div>
     </main>
 </body>
 </html>
