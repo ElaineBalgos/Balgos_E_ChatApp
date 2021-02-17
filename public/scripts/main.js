@@ -37,7 +37,7 @@ import ChatMessage from "./components/TheMessageComponent.js"
         data: {
             // incoming from the server
             messages: [],
-            user: [],
+            users: [],
             nickname: "",
             username: "",
             socketID: "",
@@ -54,7 +54,7 @@ import ChatMessage from "./components/TheMessageComponent.js"
             dispatchMessage() {
                 // debugger;
                 socket.emit('chatmessage', {content: this.message, name: this.username || "Anonymous"})
-                
+
                 this.message = "";
             }
         },
