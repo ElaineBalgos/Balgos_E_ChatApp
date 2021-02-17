@@ -5,11 +5,36 @@
   box-sizing: border-box;
 }
 
+html {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
   // background-color: $main-bg-color;
   color: $main-text-color;
+
   font-family: $default-family;
   font-size: 16px;
+
+  position: relative;
+  margin-top: 60%;
+  opacity: 85%;
+  width: 100%;
+}
+
+#index {
+  background: url(../image/mainbg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#chat {
+  background: url(../image/chatbg.jpg) no-repeat center center fixed;
 }
 
 a {
@@ -22,7 +47,7 @@ a {
 
 .new-message {
   padding: 10px;
-  background-color: blue;
+  background-color: #a2bbd9;
   color: white;
   border-radius: 8px;
   float: left;
@@ -30,6 +55,6 @@ a {
 }
 
 .my-message {
-  background-color: green;
+  background-color: #f5bdbd;
   float: right;
 }

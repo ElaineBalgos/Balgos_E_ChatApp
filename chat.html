@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="chat" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,15 @@
 </head>
 <body>
     <main id="app">
-        <h2>this is where my chat messages will show</h2>
+        <h2>Your LoveChat begins here.</h2>
 
         <!-- vue custom message comonent goes here -->
+
+       <section class="user">
+            <ul id="users" v-for="user in users">
+                <newmessage :user="username" :socketid="socketID"></newmessage>
+            </ul>
+        </section>
 
         <section class="messages">
             <ul id="messages" v-for="message in messages">
