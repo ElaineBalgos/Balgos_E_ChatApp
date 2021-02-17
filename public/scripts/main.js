@@ -9,17 +9,18 @@ import ChatMessage from "./components/TheMessageComponent.js"
     // messenger service event handling -> incoming fromthe manager
     function setUserID({sID, message}) {
         // incoming connected event with the data
-        debugger;
+        // debugger;
         vm.socketID = sID;
     }
 
-    function apprendMessage(message) {
-        vm.message.push(message);
+    function appendMessage(message) {
+        // debugger;
+        vm.messages.push(message);
     }
 
     const vm = new Vue({
         data: {
-            // received from
+            // incoming from the server
             messages: [],
             nickname: "",
             username: "",
@@ -35,7 +36,7 @@ import ChatMessage from "./components/TheMessageComponent.js"
 
         methods: {
             dispatchMessage() {
-                debugger;
+                // debugger;
                 socket.emit('chatmessage', {content: this.message, name: this.nickname || "Anonymous"})
             }
         },
@@ -47,5 +48,5 @@ import ChatMessage from "./components/TheMessageComponent.js"
     }).$mount("#app");
 
     socket.addEventListener("connected", setUserID);
-    socket.addEventListener("message", apprendMessage);
+    socket.addEventListener('message', appendMessage);
 })();

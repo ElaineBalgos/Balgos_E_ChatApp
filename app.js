@@ -31,12 +31,12 @@ messenger.on('connection', (socket) => {
     console.log(`a user connected: ${socket.id}`);
 
     // send the connected user their assigned ID
-    socket.emit('connected', { sID:`${socket.id}` , message: 'new connection'})
+    socket.emit('connected', { sID:`${socket.id}` , message: 'new connection'});
 
-    socket.on('chatmessgae', function(msg) {
+    socket.on('chatmessage', function(msg) {
         console.log(msg);
         
-        messenger.emit('message'), { id: socket.id, message: msg}
+        messenger.emit('message', { id: socket.id, message: msg})
     });
 
     socket.on('disconnect', () => {
