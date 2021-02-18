@@ -14,18 +14,18 @@ import ChatMessage from "./components/TheMessageComponent.js"
     }
 
     // Join user to chat
-    function userJoin(id, username) {
-    const user = { id, username};
+    function userJoin(sID, username) {
+    const user = { sID, username};
   
     users.push(users);
   
     return users;
     }
-
+   
     // Get current user
-    function getCurrentUser(id) {
-    return users.find(user => user.id === id);
-  }
+    function getCurrentUser(sID) {
+    return users.find(user => user.sID === id);
+    }
 
 
     function appendMessage(message) {
@@ -37,12 +37,12 @@ import ChatMessage from "./components/TheMessageComponent.js"
         data: {
             // incoming from the server
             messages: [],
-            users: [],
             nickname: "",
             username: "",
+            image: "",
             socketID: "",
              // to send
-            message: ""
+            message: "",
            
         },
 
@@ -53,7 +53,7 @@ import ChatMessage from "./components/TheMessageComponent.js"
         methods: {
             dispatchMessage() {
                 // debugger;
-                socket.emit('chatmessage', {content: this.message, name: this.username || "Anonymous"})
+                socket.emit('chatmessage', {content: this.message, name: this.username})
 
                 this.message = "";
             }
