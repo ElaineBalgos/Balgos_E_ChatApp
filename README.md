@@ -1,4 +1,4 @@
-# Mini Cooper - App
+# LoveChat App
 
 ![header image](/public/image/love.png "LoveChat")
 <br>A messaging application exclusively for couples.
