@@ -23,10 +23,10 @@ import ChatMessage from "./components/TheMessageComponent.js"
     }
    
     // Get current user
-    function getCurrentUser(sID) {
-    return users.find(user => user.sID === id);
+    function getCurrentUser() {
+        const user = sessionStorage.key(0);
+        document.getElementById("user").innerHTML = sID;
     }
-
 
     function appendMessage(message) {
         // debugger;
@@ -53,7 +53,7 @@ import ChatMessage from "./components/TheMessageComponent.js"
         methods: {
             dispatchMessage() {
                 // debugger;
-                socket.emit('chatmessage', {content: this.message, name: this.username})
+                socket.emit('chatmessage', {content: this.message, name: this.username || "Anonymous"})
 
                 this.message = "";
             }
