@@ -3,6 +3,10 @@
 ![header image](/public/image/love.png "LoveChat")
 <br>A messaging application exclusively for couples.
 
+## Usage
+
+Enter your username then select the avatar to join the chat room.
+
 ## Application Description
 
 Use Node, Express and Vue with socket.io to create an interactive chat application. Design an

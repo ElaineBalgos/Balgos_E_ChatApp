@@ -29,6 +29,12 @@
                 <input type="text" id="username" v-model="username" placeholder="enter username">
                 <!-- <input type="text" id="password" placeholder="type password"> -->
             </form>
+            
+            <section class="icon">
+                <ul id="icon" v-for="icon in info">
+                    <newicon :avtr="icon" :socketid="socketID"></newmessage>
+                </ul>
+            </section>
 
             <section class="user">
                 <a href="/chat"><img class="woman" src="image/woman.svg" alt="woman"></a>
