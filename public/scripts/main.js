@@ -1,4 +1,5 @@
-import ChatMessage from "./components/TheMessageComponent.js"
+import ChatMessage from "./components/TheMessageComponent.js";
+import ImageIcon from "./components/TheIconComponent.js"
 
 (() => {
     console.log('fired');
@@ -37,9 +38,9 @@ import ChatMessage from "./components/TheMessageComponent.js"
         data: {
             // incoming from the server
             messages: [],
-            nickname: "",
-            username: "",
-            image: "",
+            // nickname: "",
+            username: [],
+            icon: "",
             socketID: "",
              // to send
             message: "",
@@ -53,14 +54,14 @@ import ChatMessage from "./components/TheMessageComponent.js"
         methods: {
             dispatchMessage() {
                 // debugger;
-                socket.emit('chatmessage', {content: this.message, name: this.username || "Anonymous"})
-
+                socket.emit('chatmessage', {content: this.message, name: this.nickname || "Anonymous"});
                 this.message = "";
             }
         },
 
         components: {
-            newmessage: ChatMessage
+            newmessage: ChatMessage,
+            newicon: ImageIcon
         }
 
     }).$mount("#app");
